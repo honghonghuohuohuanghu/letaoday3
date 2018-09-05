@@ -1,0 +1,69 @@
+/* 引入公共样式 */
+@import 'base.less';
+
+/* 搜索页面中间主体的样式 */
+#main{
+	background-color: #fff;
+	/* 搜索表单样式 */
+	.search-form{
+		display: flex;
+		padding: 10px;
+		/* 搜索输入框 */
+		.input-search{
+			height: 30px;
+			flex:1;
+			background-color: #fff;
+			font-size: 14px;
+			text-align: left;
+			border:1px solid @mainColor;
+			/* 给输入框的右上角右下角的去掉圆角 */
+			border-radius: 6px 0px 0px 6px;
+			/* 也要把input的底部间距去掉 */
+			margin-bottom: 0px;
+		}
+		/* 搜索按钮 */
+		.btn-search{
+			width: 60px;
+			height: 30px;
+			border-color: @mainColor;
+			background-color:@mainColor;
+			/* 给按钮左上角左下角去掉圆角 */
+			border-radius: 0px 6px 6px 0px;
+		}
+	}
+	/* 搜索历史样式 */
+	.search-history{
+		padding: 0px 10px;
+		.title{
+			line-height: 30px;
+			font-size: 14px;
+		}
+		.content{
+			> ul{
+				border:1px solid #ccc;
+				border-radius:6px;
+				>li{
+					line-height: 40px;
+					height: 40px;
+					padding-left: 10px;
+					border-bottom: 1px solid #ccc;
+					position: relative;
+					>a{
+						display: block;
+						font-size: 14px;
+					}
+					>i{
+						position: absolute;
+						right: 10px;
+						top: 10px;
+						font-size: 14px;
+						top: 12px;
+					}
+					&:last-of-type{
+						border-bottom: 0px;
+					}
+				}
+			}
+		}
+	}
+}
